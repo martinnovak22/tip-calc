@@ -105,13 +105,12 @@ label span {
   color: white;
   border-radius: 5px;
   background-color: hsl(183, 100%, 15%);
-  padding: 10px 30px;
+  padding: 10px 40px;
 }
 
 #num {
-  position: relative;
-  left: 4px;
-  width: 88%;
+  justify-self: center;
+  width: 75%;
 }
 
 .input-num {
@@ -158,10 +157,18 @@ input[type="radio"]:checked + span {
   }
 
   label span {
-    padding: 10px 50px;
+    padding: 10px 40px;
   }
 
   #num-of-people {
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .tip-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
