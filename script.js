@@ -19,15 +19,13 @@ function getPeople() {
 function getTip(el) {
   tip = el.value;
   if (isNaN(tip)) {
-    console.log("not a number");
+    alert("Your tip is not a number!");
   } else {
     tip = parseInt(tip, 10);
     console.log(tip);
     calculate();
   }
 }
-
-let result_tip;
 
 function calculate() {
   if (bill != 0 && people != 0 && tip != 0) {
