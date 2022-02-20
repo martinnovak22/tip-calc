@@ -1,0 +1,6 @@
+{
+  "sass.format.enabled": false,
+  "editor.formatOnSave": true,
+  "html.format.wrapAttributes": "preserve-aligned",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

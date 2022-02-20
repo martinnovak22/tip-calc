@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-</head>
-<body>
-  <div class="flexbox-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
+    <title>Frontend Mentor | Tip calculator app</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form class="flexbox-container">
+      <div class="left-side">
+        <p>Bill</p>
+        <input class="input-num" type="number" id="bill-num" value="0" onchange="getBill(this)" />
 
-    <div class="left-side">
-      <p>Bill</p>
-        <input class="input-num" type="text" id="bill-num" value="0" />
-      
         <p>Select Tip %</p>
-      <div class="tip-input">
-        <label>
-          <input type="radio" name="options"/>
-          <span>&nbsp;5%</span>
-        </label>
-        <label>
-          <input type="radio" name="options"/>
-          <span>10%</span>
-        </label>
-        <label>
-          <input type="radio" name="options"/>
-          <span>15%</span>
-        </label>
-        <label>
-          <input type="radio" name="options"/>
-          <span>25%</span>
-        </label>
-        <label>
-          <input type="radio" name="options"/>
-          <span>50%</span>
-        </label>
-        <input class="input-num" type="text" id="num" value="Custom">
-    </div>
-      <p>Number of People</p>
-      <input class="input-num" type="text" id="num-of-people" value="0">
-    </div>
+        <div class="tip-input">
+          <label>
+            <input type="radio" name="options" value="5" onchange="getTip(this)" />
+            <span>&nbsp;5%</span>
+          </label>
+          <label>
+            <input type="radio" name="options" value="10" onchange="getTip(this)" />
+            <span>10%</span>
+          </label>
+          <label>
+            <input type="radio" name="options" value="15" onchange="getTip(this)" />
+            <span>15%</span>
+          </label>
+          <label>
+            <input type="radio" name="options" value="25" onchange="getTip(this)" />
+            <span>25%</span>
+          </label>
+          <label>
+            <input type="radio" name="options" value="50" onchange="getTip(this)" />
+            <span>50%</span>
+          </label>
+          <input class="input-num" type="text" id="num" value="Custom" onchange="getTip(this)" />
+        </div>
+        <p>Number of People</p>
+        <input class="input-num" type="number" id="num-of-people" value="1" onchange="getPeople()" />
+      </div>
 
-
-
-    <div class="right-side">
+      <div class="right-side">
         <div class="person-tip">
           <div class="first-line">
             <p class="above">Tip Amount</p>
             <p class="below">/ person</p>
           </div>
-          <h2>42.7</h2>
+          <output id="output-tip" name="result-tip">0.00</output>
+          <script>
+            const outputTip = document.getElementById("output-tip");
+          </script>
         </div>
 
         <div class="person-total">
@@ -61,14 +62,13 @@
             <p class="above">Total</p>
             <p class="below">/ person</p>
           </div>
-          <h2>32.79</h2>
+          <output id="output-total" name="result-total">0.00</output>
+          <script>
+            const outputTotal = document.getElementById("output-total");
+          </script>
         </div>
-      
-
-      <input type="button" id="reset-button" value="RESET">
-    </div>
-    
-
-  </div>  
-</body>
+        <input type="reset" id="reset-button" value="RESET" />
+      </div>
+    </form>
+  </body>
 </html>
