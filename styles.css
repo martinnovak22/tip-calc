@@ -136,7 +136,7 @@ input[type="radio"]:checked + span {
   .flexbox-container {
     display: flex;
     background-color: white;
-    width: 70%;
+    width: 80%;
     padding: 30px;
     flex-direction: column;
   }
