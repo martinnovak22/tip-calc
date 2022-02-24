@@ -35,7 +35,8 @@ table {
 }
 
 .left-side p{
-  padding: 10px 0;
+  padding: 0 0 15px;
+  margin-top: 20px;
 }
 
 body {
@@ -132,7 +133,6 @@ label {
   display: grid;
   justify-self: center;
   width: 100%;
-  padding: 20px 0;
   grid-template-columns: 1fr 1fr 1fr;
   gap:20px;
 }
@@ -152,16 +152,25 @@ label span{
 #num {
   justify-self: center;
   width: 100%;
+  text-align: center;
+  font-size: 15px;
 }
 
 .input-num {
   border-radius: 5px;
   min-height: 30px;
-  background-color: hsl(185, 41%, 84%);
   border: none;
   text-align: right;
   font-family: "Space Mono", sans-serif;
+  background-color: hsl(185, 41%, 84%);
+}
 
+#bill-num{
+  background: hsl(185, 41%, 84%) url("images/icon-dollar.svg") 2% no-repeat;
+}
+
+#num-of-people{
+  background: hsl(185, 41%, 84%) url("images/icon-person.svg") 2% no-repeat;
 }
 
 .input-num:focus{
