@@ -22,9 +22,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol, ul {
   list-style: none;
 }
@@ -40,13 +38,13 @@ table {
 }
 
 body {
-  margin: 0;
   padding: 0;
   background-color: hsl(185, 41%, 84%);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Space Mono", sans-serif;
+  margin: 100px auto;
 }
 
 .flexbox-container {
@@ -56,7 +54,6 @@ body {
   border-radius: 15px;
   max-width: 800px;
   padding: 30px;
-  margin-top: 10%;
 }
 
 .left-side {
